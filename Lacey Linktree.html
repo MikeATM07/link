@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#f3c6d7">
+<title>Lacey</title>
+<style>
+  :root { --text:#3a1a24; --pink:#ff5fa2; --pink2:#ff8cc0; --btn:rgba(255,255,255,.78); }
+  * { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
+  body {
+    min-height:100vh; color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+    background:linear-gradient(135deg,#fbe4ee,#f2c4d6,#eab0c8,#f6d3e1);
+    background-size:300% 300%; animation:bg 14s ease infinite;
+  }
+  @keyframes bg { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+  main { max-width:480px; margin:0 auto; padding-bottom:40px; }
+
+  /* Cover with soft fade */
+  .cover { position:relative; height:210px; background:#eab0c8 url("cover.jpg") center/cover no-repeat; border-radius:0 0 32px 32px; overflow:hidden; }
+  .cover::after { content:""; position:absolute; inset:0; background:linear-gradient(to bottom,rgba(255,255,255,0) 55%,rgba(240,170,200,.55)); }
+
+  /* Avatar with gradient ring + glow */
+  .avatar-wrap {
+    width:128px; height:128px; border-radius:50%; margin:-64px auto 0; position:relative; z-index:2;
+    padding:4px; background:linear-gradient(135deg,#fff,var(--pink2),var(--pink));
+    box-shadow:0 8px 28px rgba(255,95,162,.45);
+  }
+  .avatar { width:100%; height:100%; border-radius:50%; object-fit:cover; display:block; border:3px solid #fff; background:#fff; }
+
+  .head { text-align:center; padding:0 20px; }
+  h1 { margin-top:14px; font-size:26px; font-weight:800; letter-spacing:.5px; }
+  .tag { display:inline-block; margin:10px 0 26px; padding:6px 16px; font-size:12px; letter-spacing:3px; text-transform:uppercase; font-weight:700;
+    background:rgba(255,255,255,.65); border-radius:999px; }
+
+  .links { padding:0 18px; }
+  a.btn {
+    position:relative; display:flex; align-items:center; justify-content:center; gap:10px; overflow:hidden;
+    text-decoration:none; color:var(--text); background:var(--btn);
+    backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px);
+    border:1px solid rgba(255,255,255,.9); border-radius:999px; padding:19px 16px; margin-bottom:14px;
+    font-size:14px; font-weight:800; letter-spacing:2px; text-transform:uppercase;
+    box-shadow:0 4px 14px rgba(150,50,95,.10); transition:transform .15s, box-shadow .15s;
+  }
+  a.btn:hover, a.btn:active { transform:translateY(-3px) scale(1.01); box-shadow:0 10px 22px rgba(150,50,95,.22); }
+  .ico { font-size:18px; line-height:1; }
+  .ico svg { width:17px; height:17px; fill:currentColor; display:block; }
+
+  /* Main CTA */
+  a.cta {
+    flex-direction:column; gap:3px; padding:22px 16px; color:#fff; border:none;
+    background:linear-gradient(135deg,var(--pink),#ff3d8b);
+    box-shadow:0 10px 26px rgba(255,61,139,.45); font-size:16px;
+    animation:pulse 2.4s ease-in-out infinite;
+  }
+  a.cta small { font-size:11px; letter-spacing:2px; font-weight:600; opacity:.9; }
+  a.cta::before {
+    content:""; position:absolute; top:0; left:-60%; width:40%; height:100%;
+    background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+    transform:skewX(-20deg); animation:shine 3.2s ease-in-out infinite;
+  }
+  @keyframes shine { 0%{left:-60%} 55%,100%{left:130%} }
+  @keyframes pulse { 0%,100%{transform:scale(1)} 50%{transform:scale(1.025)} }
+
+  .sep { display:flex; align-items:center; gap:12px; margin:22px 6px 16px; font-size:11px; letter-spacing:3px; text-transform:uppercase; opacity:.6; }
+  .sep::before, .sep::after { content:""; flex:1; height:1px; background:currentColor; opacity:.35; }
+
+  footer { margin-top:26px; text-align:center; font-size:11px; letter-spacing:1px; opacity:.6; padding:0 20px; line-height:1.7; }
+
+  @media (prefers-reduced-motion:reduce){ *{animation:none!important} }
+</style>
+</head>
+<body>
+<main>
+  <div class="cover"></div>
+  <div class="avatar-wrap"><img class="avatar" src="avatar.jpg" alt="Lacey"></div>
+
+  <div class="head">
+    <h1>Lacey 🎀</h1>
+    <p class="tag">Gym Princess</p>
+  </div>
+
+  <div class="links">
+    <a class="btn cta" href="https://onlyfans.com/lacey_gp" rel="noopener nofollow">
+      <span>💌 More of me</span>
+    </a>
+
+    <div class="sep">follow me</div>
+
+    <a class="btn" href="https://www.instagram.com/1ac3y_xg/" rel="noopener nofollow"><span class="ico">📸</span>Instagram</a>
+    <a class="btn" href="https://www.tiktok.com/@gymbratlacey?_r=1&_t=ZS-97ovPlGsUI3" rel="noopener nofollow"><span class="ico">🎵</span>TikTok</a>
+    <a class="btn" href="https://x.com/xgoddesslacey?s=11" rel="noopener nofollow"><span class="ico"><svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></span>X</a>
+    <a class="btn" href="https://throne.com/goddessxlacey" rel="noopener nofollow"><span class="ico">👑</span>Throne</a>
+    <a class="btn" href="https://twitch.tv/lacey_xg" rel="noopener nofollow"><span class="ico">🎮</span>Twitch</a>
+    <a class="btn" href="https://bsky.app/profile/goddessxlacey.bsky.social" rel="noopener nofollow"><span class="ico">🦋</span>Bluesky</a>
+  </div>
+
+  <footer>© 2026 Lacey</footer>
+</main>
+</body>
+</html>
