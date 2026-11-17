@@ -6,6 +6,7 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#f3c6d7">
 <title>Lacey</title>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="ec25ecf8-fa66-4bcd-b1e6-a2a6ccb10869"></script>
 <style>
   :root { --text:#3a1a24; --pink:#ff5fa2; --pink2:#ff8cc0; --btn:rgba(255,255,255,.78); }
   * { box-sizing:border-box; margin:0; padding:0; -webkit-tap-highlight-color:transparent; }
@@ -44,7 +45,6 @@
   }
   a.btn:hover, a.btn:active { transform:translateY(-3px) scale(1.01); box-shadow:0 10px 22px rgba(150,50,95,.22); }
 
-  /* Icons */
   svg.i { width:19px; height:19px; flex:none; display:block; fill:none; stroke:currentColor; stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
   svg.i.f { fill:currentColor; stroke:none; }
 
@@ -68,27 +68,27 @@
 
   footer { margin-top:26px; text-align:center; font-size:11px; letter-spacing:1px; opacity:.6; padding:0 20px; line-height:1.7; }
 
-  /* 18+ gate */
+  /* Popup */
   .gate {
-    position:fixed; inset:0; z-index:999; display:flex; align-items:center; justify-content:center; padding:16px;
+    position:fixed; inset:0; z-index:999; display:flex; align-items:center; justify-content:center; padding:18px;
     background:rgba(58,26,36,.45); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px);
   }
   .gate[hidden] { display:none; }
   .gate-box {
-    width:100%; max-width:340px; text-align:center; padding:28px 22px 22px;
-    background:rgba(255,255,255,.92); border:1px solid #fff; border-radius:28px;
-    box-shadow:0 16px 40px rgba(150,50,95,.30); animation:pop .2s ease-out;
+    width:100%; max-width:340px; text-align:center; padding:30px 22px 22px;
+    background:linear-gradient(180deg,#fff,#fdeef4); border-radius:30px;
+    box-shadow:0 20px 60px rgba(150,50,95,.35); animation:pop .2s ease-out;
   }
   @keyframes pop { from{transform:scale(.92); opacity:0} to{transform:scale(1); opacity:1} }
-  .gate-title { font-size:22px; font-weight:800; margin-bottom:8px; }
-  .gate-text { font-size:14px; line-height:1.5; opacity:.75; margin-bottom:22px; }
+  .gate-title { font-size:24px; font-weight:800; line-height:1.2; margin-bottom:6px; }
+  .gate-text { font-size:15px; line-height:1.4; opacity:.75; margin-bottom:22px; }
   .gate-actions { display:flex; flex-direction:column; gap:10px; }
   .gate-actions button {
     font:inherit; font-size:13px; font-weight:800; letter-spacing:2px; text-transform:uppercase;
     padding:16px; border:none; border-radius:999px; cursor:pointer;
   }
-  .gate-yes { color:#fff; background:linear-gradient(135deg,var(--pink),#ff3d8b); box-shadow:0 8px 20px rgba(255,61,139,.40); }
-  .gate-no { color:var(--text); background:rgba(243,198,215,.55); }
+  .gate-yes { color:#fff; background:linear-gradient(135deg,var(--pink),#ff3d8b); box-shadow:0 8px 22px rgba(255,61,139,.4); }
+  .gate-no { color:var(--text); background:#fff; border:1px solid rgba(58,26,36,.15) !important; }
 
   @media (prefers-reduced-motion:reduce){ *{animation:none!important} }
 </style>
@@ -104,43 +104,50 @@
   </div>
 
   <div class="links">
-    <a class="btn cta" href="#" onclick="openGate(event)">
+    <a class="btn cta" href="#" data-umami-event="open-popup" onclick="openGate(event)" aria-label="More of me">
       <span class="row"><svg class="i" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>More of me</span>
     </a>
 
     <div class="sep">follow me</div>
 
-    <a class="btn" href="https://www.instagram.com/1acey_xg/" rel="noopener nofollow"><svg class="i" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram</a>
+    <a class="btn" href="https://www.instagram.com/1ac3y_xg/" data-umami-event="click-instagram" rel="noopener nofollow"><svg class="i" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>Instagram</a>
 
-    <a class="btn" href="https://x.com/xgoddesslacey?s=11" rel="noopener nofollow"><svg class="i f" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a>
+    <a class="btn" href="https://x.com/xgoddesslacey?s=11" data-umami-event="click-x" rel="noopener nofollow"><svg class="i f" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>X</a>
 
-    <a class="btn" href="https://throne.com/goddessxlacey" rel="noopener nofollow"><svg class="i" viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Throne</a>
+    <a class="btn" href="https://throne.com/goddessxlacey" data-umami-event="click-throne" rel="noopener nofollow"><svg class="i" viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg>Throne</a>
 
-    <a class="btn" href="https://twitch.tv/lacey_xg" rel="noopener nofollow"><svg class="i" viewBox="0 0 24 24"><path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"/></svg>Twitch</a>
+    <a class="btn" href="https://twitch.tv/lacey_xg" data-umami-event="click-twitch" rel="noopener nofollow"><svg class="i" viewBox="0 0 24 24"><path d="M21 2H3v16h5v4l4-4h5l4-4V2zm-10 9V7m5 4V7"/></svg>Twitch</a>
 
-    <a class="btn" href="https://bsky.app/profile/goddessxlacey.bsky.social" rel="noopener nofollow"><svg class="i" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>Bluesky</a>
+    <a class="btn" href="https://bsky.app/profile/goddessxlacey.bsky.social" data-umami-event="click-bluesky" rel="noopener nofollow"><svg class="i" viewBox="0 0 24 24"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>Bluesky</a>
   </div>
 
   <footer>© 2026 Lacey</footer>
 </main>
 
-<!-- 18+ gate -->
-<div id="gate" class="gate" hidden role="dialog" aria-modal="true" aria-labelledby="gate-title">
-  <div class="gate-box">
-    <p id="gate-title" class="gate-title">18+ only 🔞</p>
-    <p class="gate-text">this part is just for adults babe. are u over 18?</p>
-    <div class="gate-actions">
-      <button class="gate-yes" onclick="enter()">yes, i'm 18+</button>
-      <button class="gate-no" onclick="closeGate()">no, take me back</button>
-    </div>
-  </div>
-</div>
+<div id="gate" class="gate" hidden role="dialog" aria-modal="true"></div>
 
 <script>
+  var OF_URL = 'https://onlyfans.com/lacey_gp';
   var gate = document.getElementById('gate');
-  function openGate(e){ e.preventDefault(); gate.hidden = false; }
+  var built = false;
+  function openGate(e){
+    e.preventDefault();
+    if (!built) {
+      gate.innerHTML =
+        '<div class="gate-box">' +
+          '<p class="gate-title">Oh, hi you</p>' +
+          '<p class="gate-text">Come make me blush?</p>' +
+          '<div class="gate-actions">' +
+            '<button class="gate-yes" data-umami-event="click-onlyfans" onclick="enter()">Yes, I want it</button>' +
+            '<button class="gate-no" data-umami-event="popup-no" onclick="closeGate()">Miss out</button>' +
+          '</div>' +
+        '</div>';
+      built = true;
+    }
+    gate.hidden = false;
+  }
   function closeGate(){ gate.hidden = true; }
-  function enter(){ window.location.href = '/go'; }
+  function enter(){ window.location.href = OF_URL; }
   gate.addEventListener('click', function(e){ if (e.target === gate) closeGate(); });
   document.addEventListener('keydown', function(e){ if (e.key === 'Escape') closeGate(); });
 </script>
